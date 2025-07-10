@@ -1,0 +1,31 @@
+[workspace]
+authors = ["jc211 <29726242+jc211@users.noreply.github.com>"]
+channels = ["jc211", "conda-forge"]
+name = "qut_robot_project"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[dependencies]
+eigen = "*"
+python = "==3.13"
+libfranka = {version = "==0.9.2", channel="jc211"}
+ruckig = {version = "*", channel="jc211"}
+
+[pypi-dependencies]
+panda-python = { git = "https://github.com/jc211/panda-py" }
+panda-desk = { git = "https://github.com/jc211/panda_desk" }
+
+[tasks]
+lock = "python scripts/lock.py"
+unlock = "python scripts/unlock.py"
+home = "python scripts/home.py --speed 0.6"
+q = "python scripts/read_q.py"
+x = "python scripts/read_pose.py"
+p = "python scripts/read_position.py"
+r = "python scripts/read_rotation.py"
+
+[activation.env]
+PANDA_IP = "172.16.0.2"
+PANDA_USERNAME = "franka"
+PANDA_PASSWORD = "franka123"
+PANDA_PLATFORM = "panda"
