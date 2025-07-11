@@ -141,7 +141,7 @@ trio.run(main)
 
 ## Notes
 
-- For more advanced usage, refer to the example scripts and the [panda_py documentation](https://github.com/jc211/panda_py).
+- For more advanced usage, refer to the example scripts.
 - Always ensure the robot's workspace is clear before running movement commands.
 - If you encounter connection issues, double-check your Ethernet setup and credentials.
 
