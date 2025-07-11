@@ -9,9 +9,9 @@ import panda_py
 
 @dataclass
 class Params:
+    speed: tyro.conf.Positional[float] = 0.1  # Default speed as a percentage of max speed
     ip: str = os.environ.get("PANDA_IP", "172.16.0.2")
     platform: Literal['panda', 'fr3'] = os.environ.get("PANDA_PLATFORM", "panda") 
-    speed: float = 0.1  # Default speed as a percentage of max speed
 
 async def main():
     params = tyro.cli(Params)
