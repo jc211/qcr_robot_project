@@ -18,7 +18,7 @@ panda-desk = { git = "https://github.com/jc211/panda_desk" }
 [tasks]
 lock = "python scripts/lock.py"
 unlock = "python scripts/unlock.py"
-home = "python scripts/home.py --speed 0.6"
+home = "python scripts/home.py"
 q = "python scripts/read_q.py"
 x = "python scripts/read_pose.py"
 p = "python scripts/read_position.py"
