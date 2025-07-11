@@ -15,9 +15,9 @@ async def main():
     params = tyro.cli(Params)
     r = panda_py.Panda(params.ip, name=params.platform)
     r.recover() # Recover from any previous state
-    speed = 1.0 # percent of max speed where 0.1 is 10% of the maximum speed
-    await r.movepr([0.0, 0.0, 0.1], speed=speed)
-    await r.movepr([0.0, 0.0, -0.1], speed=speed)
+    # speed = 1.0 # percent of ax speed where 0.1 is 10% of the maximum speed
+    # await r.movepr([0.0, 0.0, 0.1], speed=speed)
+    # await r.movepr([0.0, 0.0, -0.1], speed=speed)
     print(r.get_state())
 
 if __name__ == "__main__":

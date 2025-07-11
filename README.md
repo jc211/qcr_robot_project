@@ -84,13 +84,12 @@ pixi r home 1.0
 
 ### Query Robot State
 
-Prints out commands to assign current robot state to variables for easy copy-pasting into scripts.
+Prints commands to assign current robot state to variables for easy copy-pasting.
 
 - **Joints:**  
   ```bash
   pixi r q
-  # Custom variable name:
-  pixi r q my_var
+  pixi r q my_var  # custom variable name
   ```
 - **Pose:**  
   ```bash
@@ -135,6 +134,14 @@ async def main():
     await robot.movej(q, speed=0.1)  # speed is a percentage of max speed (10% here)
 
 trio.run(main)
+```
+
+To run these scripts, enter the pixi shell first:
+
+```bash
+cd qcr_robot_project
+pixi shell
+python main.py
 ```
 
 ---
