@@ -47,7 +47,7 @@ You can also override these credentials using command-line arguments.
 
 ## Pixi Shortcut Commands
 
-From the project directory, you can use the following commands:
+From the project directory, you can use the following commands (The first time you run any of these commands, it may take a while because it has to pull the dependencies needed):
 
 ### Unlock the Robot
 
